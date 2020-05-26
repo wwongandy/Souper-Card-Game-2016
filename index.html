@@ -8,29 +8,29 @@
     <!-- Some dependencies -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css" type="text/css">
-    <link type="text/css" rel="stylesheet" href="/style.css" />
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/style.css" />
 
     <!-- p5.js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js" type="text/javascript"></script>
     
     <!-- Main game code -->
-    <script src="/code/classes/card.js" type="text/javascript"></script>
-    <script src="/code/classes/game.js" type="text/javascript"></script>
-    <script src="/code/cardGame.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/code/classes/card.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/code/classes/game.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/code/cardGame.js" type="text/javascript"></script>
   </head>
 
   <body class="ui stackable container">
 
     <!-- Banner -->
     <header class="ui segment">
-      <img class="ui fluid rounded image" src="/images/others/banner.png" alt="Banner">
+      <img class="ui fluid rounded image" src="{{ site.baseurl }}/images/others/banner.png" alt="Banner">
     </header>
 
     <!-- NavBar -->
     <nav class="ui top attached tabular menu">
       <a class="active item">Home Page</a>
-      <a class="item" href="/strands/cardsListingPage.html">Card Scoreboard</a>
+      <a class="item" href="{{ site.baseurl }}/strands/cardsListingPage.html">Card Scoreboard</a>
     </nav>
 
     <!-- Canvas element for the game -->

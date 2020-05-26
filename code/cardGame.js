@@ -46,22 +46,22 @@ let gameState,
 function preload() {
 
 	// Card statistics file
-	csvCardsFile = loadTable('/data/newstats.txt', 'csv');
+	csvCardsFile = loadTable('{{ site.baseurl }}/data/newstats.txt', 'csv');
 
 	// Bottom game divider image
-	bottomDividerImage = loadImage('/images/others/bottomDividerImage.png');
+	bottomDividerImage = loadImage('{{ site.baseurl }}/images/others/bottomDividerImage.png');
 
 	// Card borders
 	for (let i = 0; i < GRAPHICS_SETTINGS.CARD_BORDERS_AVAILABLE; i += 1) {
-		cardBorderImages[i] = loadImage(`/images/others/border${i}.png`);
+		cardBorderImages[i] = loadImage(`{{ site.baseurl }}/images/others/border${i}.png`);
 	};
 
 	// Card images
 	for (let j = 0; j < GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length; j += 1) {
-		cardMiceImages[j] = loadImage(`/images/cards/${GRAPHICS_SETTINGS.CARD_IMAGE_NAMES[j]}.png`);
+		cardMiceImages[j] = loadImage(`{{ site.baseurl }}/images/cards/${GRAPHICS_SETTINGS.CARD_IMAGE_NAMES[j]}.png`);
 	};
 
-	cardMiceImages[GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length + 1] = loadImage('/images/others/stock.png');
+	cardMiceImages[GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length + 1] = loadImage('{{ site.baseurl }}/images/others/stock.png');
 }
 
 /**

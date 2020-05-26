@@ -5,7 +5,7 @@ let csvCardsFile,
  * Perform any loading operations here.
  */
 function preload() {
-	csvCardsFile = loadTable('/data/newstats.txt', 'csv');
+	csvCardsFile = loadTable('/Souper-Card-Game-2016/data/newstats.txt', 'csv');
 };
 
 /**

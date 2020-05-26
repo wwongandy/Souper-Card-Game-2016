@@ -46,22 +46,22 @@ let gameState,
 function preload() {
 
 	// Card statistics file
-	csvCardsFile = loadTable('{{ site.baseurl }}/data/newstats.txt', 'csv');
+	csvCardsFile = loadTable('/Souper-Card-Game-2016/data/newstats.txt', 'csv');
 
 	// Bottom game divider image
-	bottomDividerImage = loadImage('{{ site.baseurl }}/images/others/bottomDividerImage.png');
+	bottomDividerImage = loadImage('/Souper-Card-Game-2016/images/others/bottomDividerImage.png');
 
 	// Card borders
 	for (let i = 0; i < GRAPHICS_SETTINGS.CARD_BORDERS_AVAILABLE; i += 1) {
-		cardBorderImages[i] = loadImage(`{{ site.baseurl }}/images/others/border${i}.png`);
+		cardBorderImages[i] = loadImage(`/Souper-Card-Game-2016/images/others/border${i}.png`);
 	};
 
 	// Card images
 	for (let j = 0; j < GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length; j += 1) {
-		cardMiceImages[j] = loadImage(`{{ site.baseurl }}/images/cards/${GRAPHICS_SETTINGS.CARD_IMAGE_NAMES[j]}.png`);
+		cardMiceImages[j] = loadImage(`/Souper-Card-Game-2016/images/cards/${GRAPHICS_SETTINGS.CARD_IMAGE_NAMES[j]}.png`);
 	};
 
-	cardMiceImages[GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length + 1] = loadImage('{{ site.baseurl }}/images/others/stock.png');
+	cardMiceImages[GRAPHICS_SETTINGS.CARD_IMAGE_NAMES.length + 1] = loadImage('/Souper-Card-Game-2016/images/others/stock.png');
 }
 
 /**

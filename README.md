@@ -6,7 +6,7 @@ A new 2020 version is on the works, titled [Transformice Ultimate Team](https://
 
 ## Play Now
 
-This game is deployed on the following link, ready for play; [soupercardgame2016.surge.sh](https://www.soupercardgame2016.surge.sh).
+This game is deployed on the following link, ready for play; [andyandya.github.io/Souper-Card-Game-2016/](https://andyandya.github.io/Souper-Card-Game-2016/).
 
 It can also be ran locally by following the instructions below;
 

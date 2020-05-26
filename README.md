@@ -10,10 +10,25 @@ This game is deployed on the following link, ready for play; [andyandya.github.i
 
 It can also be ran locally by following the instructions below;
 
-*Currently a work in progress..*
+*Note that these steps assume knowledge of the command line, and that git and npm should be installed.*
 
 #### 1. git clone
 
+The following commands executed in the terminal clones the project repository locally and moves into the new directory;
+```
+git clone https://github.com/andyAndyA/Souper-Card-Game-2016.git
+
+cd Souper-Card-Game-2016
+```
+
 #### 2. download "harp"
 
+I have been using the "harp" npm service to quickly instantiate web servers locally for testing the game, it can be installed via;
+
+`sudo npm install -g harp`
+
 #### 3. harp server
+
+Once installed, the web server can be instantiated using the following command below, and then the game is deployed locally at localhost:9000
+
+`harp server`

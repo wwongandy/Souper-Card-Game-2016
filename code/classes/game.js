@@ -247,11 +247,7 @@ function Game(maxDraftSize, maxRandomCardsAvailableCount) {
 				similarityPoints -= diff;
 			};
 		};
-
-		console.log(mainLvctCount);
-		console.log(mainMsrvCount);
-		console.log(totalPrif);
-
+		
 		return floor((mainLvctCount * mainMsrvCount * totalPrif) / 7.5);
 	};
 };

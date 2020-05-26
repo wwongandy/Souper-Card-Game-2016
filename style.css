@@ -1,0 +1,29 @@
+*
+{
+	font-family: "Open Sans", "Calibri", sans-serif;
+	text-decoration: none;
+	color: #6A7495;
+}
+
+body
+{
+	opacity: 0.8;
+	background-color: #6A7495;
+	background-attachment: fixed;
+}
+
+header
+{
+	text-align: center;
+}
+
+h1, h2, h3, h4
+{
+	color: #5AA398;
+	padding: 0px 0px 0px 10px;
+}
+
+li, .draft, .card, .quote
+{
+	padding-bottom: 5px;
+}

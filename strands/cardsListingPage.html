@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Card Scoreboard !</title>
+
+    <!-- Some dependencies -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+
+    <!-- p5.js imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js" type="text/javascript"></script>
+    
+    <!-- Cards listing code -->
+    <script src="/code/classes/card.js" type="text/javascript"></script>
+    <script src="/code/cardsListingPage.js" type="text/javascript"></script>
+  </head>
+
+  <body class="ui stackable container">
+
+    <!-- Banner -->
+    <header class="ui segment">
+      <img class="ui fluid rounded image" src="/images/others/banner.png" alt="Banner">
+    </header>
+
+    <!-- NavBar -->
+    <nav class="ui top attached tabular menu">
+      <a class="item" href="../index.html">Home Page</a>
+      <a class="active item">Card Scoreboard</a>
+    </nav>
+
+    <!-- Element for the cards listing -->
+    <main class="ui bottom attached segment">
+      <section class="ui inverted segment">
+        <h3>List of Cards (Highest Rated to Lowest)</h3>
+        <ol id="listCards">
+        </ol>
+      </section>
+    </main>
+
+  </body>
+</html>

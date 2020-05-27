@@ -19,28 +19,31 @@ function Game(maxDraftSize, maxRandomCardsAvailableCount) {
 	 */
 	this.getRandomCards = function(cardsListing) {
 		this.randomDraft = [];
-
-		// Duplicate the master cards listing for local variable manipulation
-		let newCardsList = cardsListing.slice();
 		
-		// Preventing cards from the current draft to be in the random draft list.
-		newCardsList = newCardsList.filter(function(card) {
-			for (let i = 0; i < this.currentDraftSize; i += 1) {
-				if (this.currentDraft[i].name === card.name) {
-					return false;
-				};
-			};
-
-			return true;
+		// Create a list of card names from the current draft
+		let currentDraftCardNames = this.currentDraft.map(function(card) {
+			return card.name;
 		});
 
+		let currentRandomDraftCardNames = [],
+			i = 0;
+
 		// Selecting the random cards
-		for (let i = 0; i < maxRandomCardsAvailableCount; i += 1) {
-			const randIndex = floor(random(newCardsList.length)),
-				card = newCardsList[randIndex];
-			
-			this.randomDraft[i] = card;
-			newCardsList.splice(randIndex, 1);
+		while (this.randomDraft.length !== maxRandomCardsAvailableCount) {
+			const randIndex = floor(random(cardsListing.length)),
+				card = cardsListing[randIndex];
+
+			if (
+				// Preventing cards from the current draft to be in the random draft list.
+				!currentDraftCardNames.includes(card.name) &&
+				// Preventing cards from the random draft to be in the random draft list.
+				!currentRandomDraftCardNames.includes(card.name)
+			) {
+				this.randomDraft[i] = card;
+				currentRandomDraftCardNames.push(card.name);
+
+				i += 1;
+			};
 		};
 	};
 
@@ -247,7 +250,7 @@ function Game(maxDraftSize, maxRandomCardsAvailableCount) {
 				similarityPoints -= diff;
 			};
 		};
-
+		
 		return floor((mainLvctCount * mainMsrvCount * totalPrif) / 7.5);
 	};
 };

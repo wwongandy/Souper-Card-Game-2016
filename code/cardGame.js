@@ -171,7 +171,7 @@ function drawCard(card, x, y) {
 	// Selecting which border to use for the card based on the rating.
 	let index = 0;
 	if (card.rating >= 90) {
-		index = floor(random(4, cardBorderImages.length - 1));
+		index = floor(random(4, GRAPHICS_SETTINGS.CARD_BORDERS_AVAILABLE));
 	} else if (card.rating >= 80) {
 		index = 3;
 	} else if (card.rating >= 70) {
@@ -304,7 +304,7 @@ function finishGame() {
 
 	drawBackground();
 	drawCurrentDraft(gameState);
-	displayText(gameState, "You have finished the draft ! Select any key to progress.");
+	displayText(gameState, "You have finished the draft ! Select any key to progress !");
 
 	gameState.endDraft();
 };

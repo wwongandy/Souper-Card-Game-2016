@@ -130,7 +130,7 @@ function Game(maxDraftSize, maxRandomCardsAvailableCount) {
 			summedRatings += card.rating;
 		});
 	
-		const averageRating = summedRatings / this.currentDraftSize;
+		const averageRating = summedRatings / maxDraftSize;
 		
 		// 2. Correction Factor
 		let correctionFactor = 0;
@@ -142,7 +142,7 @@ function Game(maxDraftSize, maxRandomCardsAvailableCount) {
 	
 		// 3. Overall Rating
 		// Final step
-		const overallRating = (summedRatings + correctionFactor) / this.currentDraftSize;
+		const overallRating = (summedRatings + correctionFactor) / maxDraftSize;
 
 		return isNaN(overallRating) ? 0 : floor(overallRating);
 	};

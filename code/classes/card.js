@@ -49,5 +49,6 @@ class Card {
 
 	individualCardRating = (invd, tmwk, sklp, preh, gmit, surv, race, ffa) => {
 		return floor((((invd + tmwk + sklp) / 8.0) + (((preh + gmit) / 10.0) + ((surv + race + ffa) / 14.0))) * (12.54298642534));
+		// return floor(((invd + tmwk + sklp) * 1.5) + (preh * 1.2 + gmit * 0.8) + ((surv + race + ffa) * 1.15))
 	};
 };
